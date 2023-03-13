@@ -1,0 +1,1040 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --heading: rgb(0, 10, 45);
+    --para: #777;
+    --black: #212529;
+    --para-tint: #e4e4e4;
+    --white: #fff;
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --bg: rgb(249, 249, 255);
+    --gradient: linear-gradient(0deg, rgb(132, 144, 255)/0%, rgb(98, 189, 252)/100%);
+    --gradientsupport:  #8490ff;
+    --shadow: 0px 0px 20px 0px rgb(132 144 255/ 20%);
+    --shadowsupport: 0 2rem 0 rgb(132 144 255/30%);
+    --icon-bg: rgb(144 172 209)/20%;
+    --overlay: #3e64ff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: var(--heading);
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p{
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.margin-middle{
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+       /* -----------------------------------------HEADER SECTION STARTS------------------------------- */
+
+.header{
+    padding: 0 4.8rem;
+    height: 7rem;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+   height: 3rem;
+   font-size: 1.8rem;
+}
+
+.header .logo a{
+ color: #212529;
+}
+
+.navbar-list{
+    display: flex;
+    gap: 4.8rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: color 0.3s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active{
+    color: var(--helper);
+}
+
+
+.mobile-navbar-btn{
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-nav-icon[name="close"]{
+    display: none;
+}
+
+/* sticky navbar */
+
+.sticky .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+
+
+ /* -----------------------------------------REUSEABLE CODE SECTION STARTS------------------------------- */
+
+.section{
+    padding: 9rem 0;
+}
+
+.container{
+     max-width: 128rem;
+     margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    gap: 5rem;
+}
+
+.grid-two-column{
+    grid-template-columns: repeat(2, 1fr);
+    /* or also we can write grid-template-columns: 1fr 1fr; */
+}
+
+.grid-three-column{
+    grid-template-columns: repeat(3, 1fr);
+    /* or also we can write grid-template-columns: 1fr 1fr; */
+}
+
+.grid-four-column{
+    grid-template-columns: repeat(4, 1fr);
+    /* or also we can write grid-template-columns: 1fr 1fr; */
+}
+
+
+.btn{
+    background-color: #8490ff;
+    padding: 1.6rem 3.2rem;
+    border: none;
+    color: #212529;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+.btn:active{
+    box-shadow: var(--shadowsupport);
+}
+
+.common-heading{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.common-heading::before{
+   content: "";
+   position: absolute;
+   top: 110%;
+   left: 0;
+   width: 1.5rem;
+   height: 1.5rem;
+   border-radius: 50%;
+   background-color: var(--helper);
+}
+
+.common-heading::after{
+   content: "";
+   position: absolute;
+   top: 129%;
+   left: 1.5rem;
+   min-width: 20rem;
+   height: 0.3rem;
+   background-color: var(--helper);
+}
+
+
+
+
+ /* -----------------------------------------MAIN/HERO SECTION STARTS------------------------------- */
+
+ .section-hero{
+   background-color: var(--bg);
+ }
+ .section-hero-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+ }
+
+ .hero-top-data{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+ }
+
+ .hero-heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 6.4rem;
+ }
+
+ .hero-para{
+   margin-top: 1.5rem;
+   margin-bottom: 5rem;
+   max-width: 60rem;
+ }
+
+ .section-hero-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .hero-image{
+   max-width: 80%;
+   box-shadow: 2rem 2rem 0 0 var(--helper);
+ }
+
+ /* -----------------------------------------BIO-DATA SECTION STARTS------------------------------- */
+
+ .bio-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .bio-image img{
+    width: 80%;
+    box-shadow: -2rem -2rem 0 0 var(--helper);
+    display: inline-block;
+ }
+
+ .bio-data-stats{
+          display: flex;
+          padding: 6.4rem 0;
+          flex-direction: column;
+          gap: 3rem;
+ }
+
+ .bio-stats h3{
+    margin-bottom: 1rem;
+ }
+
+ .bio-progress-bar{
+            width: 90%;
+            height: 0.8rem;
+            background-color: var(--para-tint);
+            border-radius: 10rem;
+            box-shadow: var(--shadow);
+            position: relative;
+ }
+
+ .bio-progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: inherit;
+    border-radius: 10rem;
+    background-color: #8490ff;
+ }
+
+ .bio-progress-2::before{
+    width: 80%;
+ }
+ .bio-progress-3::before{
+    width: 75%;
+ }
+ .bio-progress-4::before{
+    width: 60%;
+ }
+ .bio-progress-5::before{
+    width: 50%;
+ }
+
+ .bio-progress-6::before{
+    width: 50%;
+ }
+
+
+.bio-progress-bar span{
+    position: relative;
+    top: 1.8rem;
+    width: 4rem;
+    height: 2rem;
+    background: var(--helper);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: 0;
+}
+
+.bio-progress-bar span{
+    /* do it by -4 value */
+    left: 81%;
+}
+.bio-progress-2 span{
+    left: 76%;
+}
+.bio-progress-3 span{
+    left: 71%;
+}
+.bio-progress-4 span{
+    left: 56%;
+}
+.bio-progress-5 span{
+    left: 46%;
+}
+
+.bio-progress-6 span{
+    left: 46%;
+}
+
+/* to creat a cearet */
+
+.bio-progress-bar span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1.6rem;
+}
+
+/* -----------------------------------------PORTFOLIO SECTION STARTS------------------------------- */
+
+
+.section-portfolio{
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+
+.section-portfolio p{
+    max-width: 60rem;
+}
+
+.p-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 6.4rem 0;
+}
+
+.portfolio-images{
+    gap: 3.2rem;
+}
+
+.portfolio-images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay{
+    position: relative;
+    overflow:  hidden;
+}
+
+.img-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradientsupport);
+    opacity: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+}
+
+.img-overlay:hover > .overlay{
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.img-overlay .common-heading{
+    margin: 0;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.p-btn-active{
+    transform: translateY(-1rem);
+}
+
+.p-image-not-active{
+    display: none;
+}
+
+
+    /* -----------------------------------------SERVICE SECTION STARTS------------------------------- */ 
+
+    .section-services{
+        transition: all 0.7s linear;
+    }
+
+    .section-services p{
+        max-width: 60rem;
+    }
+
+    .section-services .grid{
+        margin-top: 10rem;
+        row-gap: 10rem;
+    }
+
+    .service-box{
+        text-align: center;
+        box-shadow: var(--shadow);
+        border-radius: 5px;
+        padding: 6.4rem 3.4rem;
+        transition: all 0.2s linear;
+    }
+
+    .service-box:hover,
+    .service-box:active{
+       transform: translateY(-3rem);
+    }
+
+    .service-icon{
+        width: 8rem;
+        height: 8rem;
+        background-color: rgb(150 159 191);
+        display: inline-block;
+        border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+        padding: 1.4rem 1.8rem;
+        position: relative;
+        color: var(--heading);
+        animation: water-wave 3s linear infinite;
+        cursor: pointer;
+    }
+
+    @keyframes water-wave {
+        0%{
+            border-radius: 56% 44% 52% 48% / 62% 39% 61% 38%;
+        }
+        50%{
+            border-radius: 13% 87% 37% 63% / 74% 15% 85% 26%;
+        }
+        100%{
+            border-radius: 56% 44% 52% 48% / 62% 39% 61% 38%;
+        }
+    }
+
+    .service-icon::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        border-radius: 31% 69% 21% 79% / 50% 53% 47% 50%;
+        border: 1px solid var(--black);
+        background: transparent;
+        animation: water-wave 3s linear infinite;
+    }
+
+    .service-box h3{
+        text-transform: capitalize;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+
+       /* ---------------------------------------------FREELANCING SECTION STARTS-------------------------------------   */
+
+       .section-freelancing{
+        background-image: url('/images/portfolieo/por2.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        position: relative;
+        transition: all 0.7s linear;
+        text-align: center;
+       }
+
+       .section-freelancing .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--helper);
+        opacity: 0.7;
+        background-color: var(--overlay);
+       }
+
+       .section-freelancing .container{
+        position: relative;
+       }
+
+       .section-freelancing h2{
+        font-size: 5.4rem;
+       }
+
+       .section-freelancing span{
+        color: #a0f669;
+       }
+
+       .section-freelancing h2,
+       .section-freelancing p{
+        color: var(--white);
+        margin-bottom: 1.8rem;
+       }
+
+       /* ---------------------------------------------CONTACT US SECTION STARTS------------------------------------- */
+
+       .section-contact-main{
+        max-width: 65rem;
+        margin: 0 auto;
+        margin-top: 9rem;
+        transition: all 0.3s linear;
+       }
+
+       .section-contact-main .grid{
+        gap: 3.2rem;
+       }
+
+       .section-contact-main form{
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+       }
+
+       .section-contact-main input,
+       .section-contact-main textarea{
+        padding: 1.5rem 2rem;
+        border: 0.1rem solid #c9c9c9;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        font-family: 'work sans';
+        width: 100%;
+       }
+
+       .section-contact-main input[type="submit"]{
+        max-width: 40%;
+        border: none;
+       }
+
+       /* ---------------------------------------------FOOTER SECTION STARTS------------------------------------- */
+
+       .section-footer{
+        background: var(--heading);
+        transition: all 0.7s linear;
+       }
+
+       .section-footer h3{
+        color: var(--white);
+        margin-bottom: 4rem;
+       }
+
+       .f-about p{
+              color: #adadad;
+       }
+
+       .f-links ul,
+       .f-services ul,
+       .f-address address{
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        justify-content: center;
+       }
+
+       .f-links li,
+       .f-links a,
+       .f-services li,
+       .f-services a{
+        font-size: 1.5rem;
+        color: #adadad;
+        text-transform: capitalize;
+       }
+       
+       .f-links span,
+       .f-services span,
+    .f-address span{
+        margin-right: 1rem;
+       }
+
+    .f-address p,   
+    .f-address p a{
+       font-style: normal;
+       color: #adadad;
+       }
+
+       .f-social-icons{
+        margin: 5rem 0;
+        text-align: center;
+        color: #adadad;
+       }
+
+       .f-social-icons .icons{
+        width: 4rem;
+        height: 4rem;
+        background-color: rgb(150 159 191);
+        display: inline-block;
+        padding: 1.4rem 1.8rem;
+        position: relative;
+        color: var(--white);
+        animation: water-wave 3s linear infinite;
+       }
+
+       .f-cradits p{
+        text-align: center;
+        color: #adadad;
+       }
+
+       .section-footer a:hover,
+       .section-footer a:active{
+             color: var(--white);
+       }
+
+/* -----------------------------------------SCROLLER-TOP SECTION STARTS------------------------------- */  
+
+.scroll-top-style{
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 1;
+}
+
+.scroll-top{
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(150 159 191);
+    display: inline-block;
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    color: var(--heading);
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* -------------------------------------------media queries */
+
+/* (max-width: 980px) responsive */
+
+@media (max-width: 980px){
+      
+    html{
+        font-size: 50%;
+    }
+
+    .section-hero h1{
+        line-height: 1.05;
+    }
+
+    .section-services .grid{
+      gap: 6rem;
+    }
+
+    .section-services .grid-three-column{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .header{
+        position: relative;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 9999;
+        border: 2px solid var(--black);
+        color: var(--black);
+    }
+
+    .mobile-nav-icon{
+        width: 5rem;
+        height: 5rem;
+        color: var(--black);
+    }
+
+    .header .logo{
+        width: 40%;
+    }
+
+    .container{
+        max-width: 115rem;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--gradientsupport);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navbar-list .navbar-link:link,
+    .navbar .navbar-list .navbar-link:visited{
+        color: #212529;
+        font-size: 3.2rem;
+    }
+
+    .active .navbar{
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu"]{
+            display: none;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close"]{
+            display: block;
+    }
+
+    .section-footer .grid-four-column{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .img-overlay .common-heading{
+          font-size: 3.2rem;
+    }
+
+    .img-overlay .common-heading::before,
+    .img-overlay .common-heading::after{
+        contain: "";
+        width: 0;
+        height: 0;
+    }
+
+    .common-heading::before {
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--helper);
+}
+}
+
+@media(max-width: 785px){
+ 
+    .common-heading::before {
+        content: "";
+        position: absolute;
+        top: 124%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--helper);
+}
+}
+
+@media(max-width: 560px){
+ 
+    .common-heading::before {
+        content: "";
+        position: absolute;
+        top: 119%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--helper);
+}
+}
+
+@media(max-width: 462px){
+ 
+    .common-heading::before {
+        content: "";
+        position: absolute;
+        top: 121%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--helper);
+}
+}
+
+@media(max-width: 365px){
+ 
+    .common-heading::before {
+        content: "";
+        position: absolute;
+        top: 124%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--helper);
+}
+}
+
+@media(max-width: 370px){
+ .p-btns{
+   gap: 1rem;
+ }
+}
+
+@media(max-width: 350px){
+ .p-btns{
+   gap: .5rem;
+ }
+ .p-btn{
+    width: 93px;
+    height: 40px;
+ }
+
+}
+
+
+
+
+/* (max-width: 95em or 1500px) responsive */
+
+@media(max-width: 95em){
+    .container{
+        max-width: 130rem;
+        padding: 0 3.2rem;
+    }
+
+    .navbar-list{
+        gap: 3.4rem;
+    }
+}
+
+/* (max-width: 1200px or 75em divide by 16 to make px to em) responsive */
+
+@media(max-width: 75em){
+    html{
+        font-size: 56.25%;
+    }
+
+    .container{
+        max-width: 115rem;
+    }
+
+    .grid{
+        gap: 4.8rem;
+    }
+}
+
+/* (max-width: 790px or 49em divide by 16 to make px to em) responsive */
+
+
+@media(max-width: 49em){
+       .container{
+        max-width: 71rem;
+       }
+
+       .section-hero .grid-two-column{
+       grid-template-columns: 1fr;
+       }
+
+       .section-hero-data{
+        align-items: center;
+       }
+
+       .hero-heading{
+        text-align: center;
+       }
+
+       .hero-para{
+        text-align: center;
+        margin-top: 2rem;
+       }
+
+       .section-hero img{
+        width: 70%;
+       }
+
+       /* for bio-data */
+       .section-biodata .grid-two-column{
+         grid-template-columns: 1fr;
+       }
+
+       .section-biodata .bio-image{
+        grid-row: 2;
+        margin-top: 3.2rem;
+        /* grid-row-start: 2;
+        grid-row-end: 3; */
+       }
+
+       .section-biodata .bio-image img{
+        width: 50%;
+       }
+
+
+       /* portfolio section */
+
+       .section-portfolio .grid-three-column{
+        grid-template-columns: repeat(2, 1fr);
+       }
+
+       /* work data */
+       .section-work-data .grid-four-column{
+        grid-template-columns: 1fr 1fr;
+       }
+}
+
+/* (max-width: 560px or 35em divide by 16 to make px to em) responsive */
+
+@media(max-width: 35em) {
+
+    .header{
+        padding: 0 3.2rem;
+    }
+
+    .header .logo{
+        width: 50%;
+    }
+/* portfolio section */
+
+    .p-btn{
+        gap: 2.8rem;
+    }
+
+    .img-overlay .common-heading{
+        font-size: 1.4rem;
+  }
+
+    .btn{
+    padding: 1rem 2rem;
+    }
+
+    .counter-numbers{
+        font-size: 3.2rem;
+    }
+
+    /* service section */
+    .section-services .grid-three-column{
+        grid-template-columns: 1fr;
+    }
+
+    .section-freelancing h2{
+        font-size: 3rem;
+    }
+
+    .contact-container .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+
+    .section-contact-main input[type="submit"]{
+        max-width: 60%;
+    }
+
+    .contact-container{
+        padding: 0 3.2rem;
+    }
+
+    .section-footer .f-about,
+    .section-footer .f-address{
+        grid-column: 1/-1;
+    }
+
+    .common-heading{
+        font-size: 3.3rem;
+    }
+}
+
